@@ -12,7 +12,7 @@ class AdditionalServiceRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         // only allow updates if the user is logged in
         return backpack_auth()->check();
@@ -23,10 +23,10 @@ class AdditionalServiceRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-             'name' => 'required|min:2|max:255'
+             'name' => 'required|max:255'
         ];
     }
 
@@ -35,7 +35,7 @@ class AdditionalServiceRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
+    public function attributes(): array
     {
         return [
             //
@@ -47,10 +47,11 @@ class AdditionalServiceRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
-            //
+            'name.required' => 'Поле название обязательно!',
+            'name.max' => 'Поле название не может быть более 255 символов!',
         ];
     }
 }

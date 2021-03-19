@@ -41,7 +41,10 @@ class PortfolioItemRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            //
+//            'name' => 'required|min:3|max:255',
+//            'image' => 'required',
+//            'portfolio_block_id' => 'required|integer',
+//            'sort' => 'required|integer'
         ];
     }
 
@@ -53,7 +56,13 @@ class PortfolioItemRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'name.required' => 'Поле название обязательно!',
+            'name.max' => 'Поле название не может превышать 255 символов!',
+            'image.required' => 'Изображение обязательно!',
+            'portfolio_block_id.required' => 'Поле блок портфолио обязательно!',
+            'portfolio_block_id.integer' => 'Поле блок портфолио должно быть целым, положительным числом',
+            'sort.required' => 'Поле сортировка обязательно!',
+            'sort.integer' => 'Поле сортировка должно быть целым, положительным числом',
         ];
     }
 }

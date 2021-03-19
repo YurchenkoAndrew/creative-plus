@@ -26,7 +26,7 @@ class ServiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-             'name' => 'required|min:2|max:255'
+             'name' => 'required|max:255'
         ];
     }
 
@@ -50,7 +50,8 @@ class ServiceRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'name.required' => 'Поле название обязательно!',
+            'name.max' => 'Поле название не может превышать 255 символов!',
         ];
     }
 }

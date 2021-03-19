@@ -12,7 +12,7 @@ class ContactRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         // only allow updates if the user is logged in
         return backpack_auth()->check();
@@ -23,7 +23,7 @@ class ContactRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
              'email' => 'required|email|max:255',
@@ -38,7 +38,7 @@ class ContactRequest extends FormRequest
      *
      * @return array
      */
-    public function attributes()
+    public function attributes(): array
     {
         return [
             //
@@ -50,10 +50,16 @@ class ContactRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
-            //
+            'email.required' => 'Email обязателен!',
+            'phone.required' => 'Email обязателен!',
+            'email.email' => 'Email не корректен!',
+            'email.max' => 'Email не должен превышать 255 символов!',
+            'phone.max' => 'Телефон не должен превышать 18 символов!',
+            'mobile_phone.max' => 'Мобильный телефон не должен превышать 18 символов!',
+            'site.max' => 'Поле сайт не должено превышать 255 символов!'
         ];
     }
 }

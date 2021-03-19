@@ -26,7 +26,7 @@ class PortfolioBlockRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:5|max:255',
+            'name' => 'required|max:255',
             'sort' => 'required|integer'
         ];
     }
@@ -51,7 +51,10 @@ class PortfolioBlockRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'name.required' => 'Поле название обязательно!',
+            'name.max' => 'Поле название не может превышать 255 символов!',
+            'sort.required' => 'Поле сортировка обязательно!',
+            'sort.integer' => 'Поле сортировка должно быть целым, положительным числом',
         ];
     }
 }

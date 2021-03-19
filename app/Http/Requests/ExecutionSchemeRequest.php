@@ -26,7 +26,9 @@ class ExecutionSchemeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|max:255',
+            'image' => 'required',
+            'sort' => 'required|integer'
         ];
     }
 
@@ -38,9 +40,7 @@ class ExecutionSchemeRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'name' => 'required|min:2|max:255',
-            'image' => 'required',
-            'sort' => 'required|integer'
+            //
         ];
     }
 
@@ -52,7 +52,11 @@ class ExecutionSchemeRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'name.required' => 'Поле название обязательно!',
+            'name.max' => 'Поле название не может превышать 255 символов!',
+            'image.required' => 'Изображение обязательно!',
+            'sort.required' => 'Поле сортировка обязательно!',
+            'sort.integer' => 'Поле сортировка должно быть целым, положительным числом',
         ];
     }
 }

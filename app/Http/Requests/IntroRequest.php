@@ -26,9 +26,9 @@ class IntroRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'lead_in' => 'required|min:5|max:255',
-            'heading' => 'required|min:5|max:255',
-            'btn_text' => 'required|min:5|max:255',
+            'lead_in' => 'required|max:255',
+            'heading' => 'required|max:255',
+            'btn_text' => 'required|max:255',
             'logo' => 'required'
         ];
     }
@@ -53,7 +53,13 @@ class IntroRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'lead_in.required' => 'Поле заголовок обязательно!',
+            'heading.required' => 'Поле описание обязательно!',
+            'btn_text.required' => 'Поле текст кнопки обязательно!',
+            'logo.required' => 'Поле логотип обязательно!',
+            'lead_in.max' => 'Поле заголовок не может превышать 255 символов!',
+            'heading.max' => 'Поле описание не может превышать 255 символов!',
+            'btn_text.max' => 'Поле текст кнопки не может превышать 255 символов!',
         ];
     }
 }

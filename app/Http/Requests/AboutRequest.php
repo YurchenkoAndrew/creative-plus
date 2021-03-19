@@ -50,7 +50,8 @@ class AboutRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'description.required' => 'Поле описание обязательно!',
+            'description.min' => 'Поле описание не может быть меньше 5 символов!'
         ];
     }
 }

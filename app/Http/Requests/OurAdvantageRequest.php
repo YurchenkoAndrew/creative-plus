@@ -27,7 +27,7 @@ class OurAdvantageRequest extends FormRequest
     {
         return [
              'image' => 'required',
-             'text' => 'required|min:5|max:255'
+             'text' => 'required|max:255'
         ];
     }
 
@@ -51,7 +51,9 @@ class OurAdvantageRequest extends FormRequest
     public function messages(): array
     {
         return [
-            //
+            'image.required' => 'Поле изображение обязательно!',
+            'text.required' => 'Поле текст обязательно!',
+            'text.max' => 'Поле текст не может превышать 255 символов!',
         ];
     }
 }
