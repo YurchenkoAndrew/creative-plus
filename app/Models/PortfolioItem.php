@@ -26,7 +26,7 @@ class PortfolioItem extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['portfolio_block_id', 'name', 'image', 'sort'];
+    protected $fillable = ['portfolio_block_id', 'name', 'image', 'sort', 'description'];
     // protected $hidden = [];
     // protected $dates = [];
 

@@ -29,7 +29,8 @@ class PortfolioItemRequest extends FormRequest
             'name' => 'required|min:3|max:255',
             'image' => 'required',
             'portfolio_block_id' => 'required|integer',
-            'sort' => 'required|integer'
+            'sort' => 'required|integer',
+            'description' => 'string|max:160'
         ];
     }
 
@@ -63,6 +64,8 @@ class PortfolioItemRequest extends FormRequest
             'portfolio_block_id.integer' => 'Поле блок портфолио должно быть целым, положительным числом',
             'sort.required' => 'Поле сортировка обязательно!',
             'sort.integer' => 'Поле сортировка должно быть целым, положительным числом',
+            'description.string' => 'Поле описание должно быть строкой!',
+            'description.max' => 'Поле описание не может превышать 160 символов!',
         ];
     }
 }
