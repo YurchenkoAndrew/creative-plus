@@ -44,7 +44,7 @@ class PortfolioItem extends Model
 
     public function portfolioBlock(): BelongsTo
     {
-        return $this->belongsTo(PortfolioBlock::class);
+        return $this->belongsTo(PortfolioBlock::class)->orderBy('sort');
     }
 
     /*

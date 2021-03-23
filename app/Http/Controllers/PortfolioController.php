@@ -16,7 +16,7 @@ class PortfolioController extends Controller
      */
     public function index(): JsonResponse
     {
-        return \response()->json(PortfolioBlock::with('items')->get(), Response::HTTP_OK);
+        return \response()->json(PortfolioBlock::with('items')->orderBy('sort')->get(), Response::HTTP_OK);
     }
 
     /**
