@@ -10,6 +10,7 @@ use Intervention\Image\Facades\Image;
 
 /**
  * @method static count()
+// * @method static find(Integer $id, string $string)
  */
 class Intro extends Model
 {
@@ -24,7 +25,7 @@ class Intro extends Model
     protected $table = 'intros';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
-    protected $guarded = ['id'];
+//    protected $guarded = ['id'];
     protected $fillable = ['logo', 'lead_in', 'heading', 'btn_text'];
     // protected $hidden = [];
     // protected $dates = [];

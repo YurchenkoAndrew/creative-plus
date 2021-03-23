@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static count()
@@ -38,9 +39,9 @@ class PortfolioBlock extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function portfolioItems()
+    public function items(): HasMany
     {
-        $this->hasMany(PortfolioItem::class);
+        return $this->hasMany(PortfolioItem::class);
     }
 
     /*
