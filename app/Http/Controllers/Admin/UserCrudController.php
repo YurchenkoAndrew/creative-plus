@@ -42,6 +42,14 @@ class UserCrudController extends CrudController
 //        CRUD::column('name');
         CRUD::addColumn(['name' => 'name', 'type' => 'text', 'label' => 'Логин']);
         CRUD::addColumn(['name' => 'email', 'type' => 'email', 'label' => 'Email']);
+        CRUD::addColumn(
+            [
+                'name' => 'is_admin',
+                'type' => 'boolean',
+                'label' => 'Админ',
+                'options' => [0 => 'Пользователь', 1 => 'Администратор']
+            ]
+        );
 //        CRUD::column('email');
 //        CRUD::column('password');
 
@@ -68,6 +76,14 @@ class UserCrudController extends CrudController
         CRUD::addField(['name' => 'name', 'type' => 'text', 'label' => 'Логин']);
         CRUD::addField(['name' => 'email', 'type' => 'email', 'label' => 'Email']);
         CRUD::addField(['name' => 'password', 'type' => 'password', 'label' => 'Пароль']);
+        CRUD::addField(
+            [
+                'name' => 'is_admin',
+                'type' => 'boolean',
+                'label' => 'Админ',
+                'options' => [0 => 'Пользователь', 1 => 'Администратор']
+            ]
+        );
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
