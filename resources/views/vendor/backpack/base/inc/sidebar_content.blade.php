@@ -12,7 +12,7 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('about') }}'><i class='nav-icon la la-info-circle'></i> О нас</a></li>
 
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('ouradvantage') }}'><i class='nav-icon la la-check-circle'></i> Наши приемущества</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('ouradvantage') }}'><i class='nav-icon la la-check-circle'></i> Наши преимущества</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('executionscheme') }}'><i class='nav-icon la la-clock'></i> Схема работ</a></li>
 
