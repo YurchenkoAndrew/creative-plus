@@ -46,7 +46,7 @@ class ContactCrudController extends CrudController
         CRUD::addColumn(['name' => 'email', 'type' => 'email', 'label' => 'Email']);
         CRUD::addColumn(['name' => 'phone', 'type' => 'phone', 'label' => 'Телефон']);
         CRUD::addColumn(['name' => 'mobile_phone', 'type' => 'phone', 'label' => 'Телефон мобильный']);
-        CRUD::addColumn(['name' => 'site', 'type' => 'text', 'label' => 'Сайт']);
+        CRUD::addColumn(['name' => 'site', 'type' => 'url', 'label' => 'Сайт']);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -69,6 +69,8 @@ class ContactCrudController extends CrudController
         CRUD::addField(['name' => 'phone', 'type' => 'text', 'label' => 'Телефон']);
         CRUD::addField(['name' => 'mobile_phone', 'type' => 'text', 'label' => 'Телефон мобильный']);
         CRUD::addField(['name' => 'site', 'type' => 'text', 'label' => 'Сайт']);
+        CRUD::addField(['name' => 'whatsapp', 'type' => 'number', 'label' => 'Whatsapp']);
+        CRUD::addField(['name' => 'instagram', 'type' => 'url', 'label' => 'Instagram']);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

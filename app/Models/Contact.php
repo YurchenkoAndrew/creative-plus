@@ -22,7 +22,7 @@ class Contact extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-     protected $fillable = ['email', 'phone', 'mobile_phone', 'site'];
+     protected $fillable = ['email', 'phone', 'mobile_phone', 'site', 'whatsapp', 'instagram'];
     // protected $hidden = [];
     // protected $dates = [];
 
