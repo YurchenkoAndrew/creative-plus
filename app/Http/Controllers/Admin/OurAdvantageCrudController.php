@@ -28,7 +28,7 @@ class OurAdvantageCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\OurAdvantage::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/ouradvantage');
-        CRUD::setEntityNameStrings('запись', 'Наши приемущества');
+        CRUD::setEntityNameStrings('запись', 'Наши преимущества');
     }
 
     /**

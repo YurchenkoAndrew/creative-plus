@@ -5,6 +5,9 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static find(int $int)
+ */
 class About extends Model
 {
     use CrudTrait;
